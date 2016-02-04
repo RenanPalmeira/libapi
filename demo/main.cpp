@@ -3,6 +3,7 @@
 #include "libapi/libapi.h"
 
 int main(void) {
+	API::Response r = API::egg();
 	printf("Its worked\n");
 	return 0;
 }

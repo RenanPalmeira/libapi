@@ -4,14 +4,14 @@
 #include <curl/curl.h>
 #include <string>
 
-namespace libapi {
-	struct Response {
+namespace API {
+	typedef struct {
 		int code;
-		std::string body;
 	} Response;
+
+	Response egg();
 	int get(char url);
 }
 
-int egg();
 
 #endif

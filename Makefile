@@ -6,6 +6,9 @@ CXXINCLUDE=-Iinclude
 LIBAPI_SOURCE = source/libapi.cpp
 
 all:
+	make build
+
+build:
 	$(CXX) $(CXXINCLUDE) $(CXXFLAGS) $(LIBAPI_SOURCE) -o libapi.o
 	# -I/usr/include/python2.7
 	# -Icurl
@@ -14,6 +17,10 @@ all:
 run:
 	$(CXX) demo/main.cpp -o $(LIBAPI_BUILD) -Iinclude -Llibapi
 	./$(LIBAPI_BUILD)
+
+test:
+	make build
+	make run
 
 clean:
 	rm -f libapi.so libapi.o $(LIBAPI_BUILD)
