@@ -1,22 +1,24 @@
 CXX=g++
 
-LIBAPI_BUILD=main.o
-CXXFLAGS=-Wall -fPIC -c
+CXXFLAGS=-Wall -fpic
 CXXINCLUDE=-Iinclude
-LIBAPI_SOURCE = source/libapi.cpp
+API_OUTPUT=api.o
+OUTPUT=main.out
+SRC = source/libapi.cpp
 
-all:
-	make build
+all: build
 
-build:
-	$(CXX) $(CXXINCLUDE) $(CXXFLAGS) $(LIBAPI_SOURCE) -o libapi.o
-	# -I/usr/include/python2.7
-	# -Icurl
-	$(CXX) -shared -o libapi.so libapi.o
+# -Icurl
+# -I/usr/include/python2.7
+build: output
+	$(CXX) $(CXXFLAGS) -c $(SRC) -o $(API_OUTPUT) $(CXXINCLUDE)
 
-run:
-	$(CXX) demo/main.cpp -o $(LIBAPI_BUILD) -Iinclude -Llibapi
-	./$(LIBAPI_BUILD)
+
+output:
+	$(CXX) demo/main.cpp $(API_OUTPUT) -o $(OUTPUT) $(CXXINCLUDE) 
+	
+run: output
+	./$(OUTPUT)
 
 test:
 	make build

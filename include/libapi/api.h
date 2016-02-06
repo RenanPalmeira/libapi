@@ -1,5 +1,5 @@
-#ifndef INCLUDE_LIBAPI_LIBAPI_H_
-#define INCLUDE_LIBAPI_LIBAPI_H_
+#ifndef INCLUDE_LIBAPI_API_H_
+#define INCLUDE_LIBAPI_API_H_
 
 #include <curl/curl.h>
 #include <string>
@@ -10,8 +10,6 @@ namespace API {
 	} Response;
 
 	Response egg();
-	int get(char url);
+	int get();
 }
-
-
 #endif

@@ -1,8 +1,5 @@
-#include "libapi/libapi.h"
-#include <curl/curl.h>
-#include <stdio.h>
+#include "libapi/api.h"
 
-API::Response egg() {
-	API::Response ret;
-	return ret;
+int API::get() {
+	return 2;
 }
