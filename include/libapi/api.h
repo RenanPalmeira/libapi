@@ -9,7 +9,6 @@ namespace API {
 		int code;
 	} Response;
 
-	Response egg();
-	int get();
+	Response get();
 }
 #endif

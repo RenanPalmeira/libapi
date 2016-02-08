@@ -1,5 +1,7 @@
 #include "libapi/api.h"
 
-int API::get() {
-	return 2;
+API::Response API::get() {
+	API::Response r;
+	return r;
 }
+

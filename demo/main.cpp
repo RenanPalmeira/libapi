@@ -7,8 +7,7 @@
 using namespace std;
 
 int main(void) {
-	int y = API::get();
-	cout << y << "\n";
+	API::Response y = API::get();
 	printf("Its worked\n");
 	return 0;
 }
