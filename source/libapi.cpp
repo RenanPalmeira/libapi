@@ -2,6 +2,7 @@
 
 API::Response API::get() {
 	API::Response r;
+	r.code = 2;
 	return r;
 }
 

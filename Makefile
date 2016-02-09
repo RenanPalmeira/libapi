@@ -4,7 +4,7 @@ CXXFLAGS=-Wall -fpic
 CXXINCLUDE=-Iinclude
 API_OUTPUT=api.o
 OUTPUT=main.out
-SRC = source/libapi.cpp
+SRC=source/libapi.cpp
 
 all: build
 
